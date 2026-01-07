@@ -35,8 +35,8 @@ ENV PYTHONUNBUFFERED=1
 # Copy project
 COPY . .
 
-# Collect static files
-RUN python manage.py collectstatic --noinput --clear
+# Collect static files with temporary SECRET_KEY for build
+RUN SECRET_KEY=temp-build-key python manage.py collectstatic --noinput --clear
 
 # Expose port
 EXPOSE 8000
