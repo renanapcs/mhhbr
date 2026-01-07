@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 2,
+  "dockerfilePath": "./Dockerfile",
+  "displayName": "Museu do Hip Hop Brasil",
+  "description": "Sistema Django para pesquisa e levantamento da cultura Hip-Hop",
+  "isPublic": false,
+  "ports": ["8000"]
+}

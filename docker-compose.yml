@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=False
+      - SECRET_KEY=your-secret-key-for-testing
+      - ALLOWED_HOSTS=localhost,127.0.0.1,web
+      - DATABASE_URL=postgresql://mhhbr:mhhbr@db:5432/mhhbr_db
+      - EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
+    depends_on:
+      - db
+    volumes:
+      - ./:/app
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py collectstatic --noinput &&
+             gunicorn --bind 0.0.0.0:8000 --reload config.wsgi:application"
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=mhhbr
+      - POSTGRES_PASSWORD=mhhbr
+      - POSTGRES_DB=mhhbr_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
