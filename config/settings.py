@@ -30,6 +30,8 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=lamb
 
 # Add GitHub Codespaces hostname
 ALLOWED_HOSTS.append('.app.github.dev')
+# Add CapRover domain
+ALLOWED_HOSTS.append('.cloud.getstock.app')
 
 # CSRF trusted origins for development
 CSRF_TRUSTED_ORIGINS = [
@@ -38,6 +40,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
     'https://127.0.0.1:8000',
     'https://solid-pancake-q4xwj6q94vrc4q46-8000.app.github.dev',
+    'https://mhhbr.cloud.getstock.app',
 ]
 
 # Application definition
