@@ -8,8 +8,8 @@ services:
     environment:
       - DEBUG=False
       - SECRET_KEY=your-secret-key-for-testing
-      - ALLOWED_HOSTS=localhost,127.0.0.1,web
-      - DATABASE_URL=postgresql://mhhbr:mhhbr@db:5432/mhhbr_db
+      - ALLOWED_HOSTS=localhost,127.0.0.1,mhhbr.cloud.getstock.app,web
+      - DATABASE_URL=postgresql://mhhbr:mhhbr@db:5423/mhhbr_db
       - EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
     depends_on:
       - db
@@ -29,7 +29,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "5423:5423"
 
 volumes:
   postgres_data:
