@@ -151,9 +151,8 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 # Django-allauth settings
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_AUTHENTICATION_METHOD = 'email'
-ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_LOGIN_METHODS = {'email'}
+ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
 ACCOUNT_EMAIL_VERIFICATION = 'optional'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
@@ -175,3 +174,13 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+
+# For testing without PostgreSQL, temporarily use SQLite
+import os
+if os.getenv('USE_SQLITE', 'False') == 'True':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
