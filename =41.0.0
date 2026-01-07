@@ -1,0 +1,8 @@
+Collecting PyJWT
+  Downloading PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+Requirement already satisfied: cryptography in ./venv/lib/python3.12/site-packages (46.0.3)
+Requirement already satisfied: cffi>=2.0.0 in ./venv/lib/python3.12/site-packages (from cryptography) (2.0.0)
+Requirement already satisfied: pycparser in ./venv/lib/python3.12/site-packages (from cffi>=2.0.0->cryptography) (2.23)
+Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
+Installing collected packages: PyJWT
+Successfully installed PyJWT-2.10.1

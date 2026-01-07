@@ -21,13 +21,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default='django-insecure-h!s9enja0yo7k23ngi4mp8q1%$!&n82e%ljxd7d#s-g@t3-ji-')
+SECRET_KEY = config('SECRET_KEY',)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=lambda v: [s.strip() for s in v.split(',')])
 
+# Add GitHub Codespaces hostname
+ALLOWED_HOSTS.append('.app.github.dev')
+
+# CSRF trusted origins for development
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',
+    'https://localhost:8000',
+    'http://127.0.0.1:8000',
+    'https://127.0.0.1:8000',
+    'https://solid-pancake-q4xwj6q94vrc4q46-8000.app.github.dev',
+]
 
 # Application definition
 
