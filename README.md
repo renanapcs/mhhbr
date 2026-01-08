@@ -1,10 +1,10 @@
-# Museu do Hip Hop Brasil (MHHBR)
+# UNIVERSIDADE HIP HOP BRASIL / HORTO FLORESTAL QUILOBO CABULA SALVADOR-BA
 
 Sistema de pesquisa e levantamento da cultura Hip-Hop nacional desenvolvido em Django com PostgreSQL e autenticação social Google.
 
 ## 🎤 Sobre o Projeto
 
-O MHHBR é uma plataforma para coletar e gerenciar informações sobre a cultura Hip-Hop brasileira, incluindo dados sobre MCs/Rappers, DJs, Grafiteiros, B-Boys/B-Girls, grupos, fãs e consumidores da cultura.
+A UNIVERSIDADE HIP HOP BRASIL / HORTO FLORESTAL QUILOBO CABULA SALVADOR-BA é uma plataforma para coletar e gerenciar informações sobre a cultura Hip-Hop brasileira, incluindo dados sobre MCs/Rappers, DJs, Grafiteiros, B-Boys/B-Girls, grupos, fãs e consumidores da cultura.
 
 ## 🚀 Tecnologias
 
@@ -80,5 +80,5 @@ Open Source
 
 ---
 
-**Museu do Hip Hop Brasil** - Preservando e documentando a cultura Hip-Hop nacional 🎵
+**UNIVERSIDADE HIP HOP BRASIL / HORTO FLORESTAL QUILOBO CABULA SALVADOR-BA** - Preservando e documentando a cultura Hip-Hop nacional 🎵
 

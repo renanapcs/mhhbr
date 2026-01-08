@@ -1,4 +1,4 @@
-# Museu do Hip Hop Brasil - Sistema de Pesquisa
+# UNIVERSIDADE HIP HOP BRASIL / HORTO FLORESTAL QUILOBO CABULA SALVADOR-BA - Sistema de Pesquisa
 
 Sistema Django para levantamento e pesquisa da cultura Hip-Hop nacional.
 
@@ -125,7 +125,7 @@ python manage.py createsuperuser
 3. Login com o superusuário
 4. Vá para **Sites** e edite o site example.com:
    - Domain name: `localhost:8000`
-   - Display name: `MHHBR`
+   - Display name: `UNIVERSIDADE HIP HOP BRASIL`
 5. Vá para **Social applications** > Add
    - Provider: Google
    - Name: Google OAuth
